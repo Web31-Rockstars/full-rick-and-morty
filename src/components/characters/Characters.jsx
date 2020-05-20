@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-import {Link} from 'react-router-dom';
+import Character from './Character';
 
 const Characters = () => {
     const [data,setData]= useState({results:[]});
@@ -16,16 +16,12 @@ const Characters = () => {
     
     ,[])
 
-    
-
     return (
         <p> 
         {data.results.map(character=>{
             return(
             <article key={character.id}>
-            <Link to={`/characters/${character.id}`}>
-                {character.name}
-            </Link>
+                <Character url={character.url} />
             </article>)
         })}
         </p>
