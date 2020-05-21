@@ -4,6 +4,7 @@ import axios from 'axios'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/home/Home';
 import Characters from './components/characters/Characters';
+import Episodes from './components/episodes/Episodes';
 
 function App() {
 
@@ -29,11 +30,12 @@ useEffect(()=> {
             <Route exact path = '/'>
               <Home />
             </Route>
-
             <Route exact path='/characters'>
               <Characters />
             </Route>
-
+            <Route exact path='/episodes' >
+              <Episodes />
+            </Route>
           </Switch>
         </main>
       </div>

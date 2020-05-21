@@ -3,7 +3,7 @@ import Axios from 'axios';
 
 const Character= ({url}) => {
     const [data, setData] =  useState({});
- 
+    
     useEffect(()=>{
         Axios.get(url)
         .then(response=>{
@@ -18,7 +18,7 @@ const Character= ({url}) => {
     <> 
     <article>
         <img src={data.image} alt={data.name} />
-    <p>{data.name}</p>
+        <p>{data.name}</p>
     </article>
     </>
     )
