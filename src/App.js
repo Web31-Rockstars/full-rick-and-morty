@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/home/Home';
 import Characters from './components/characters/Characters';
 import Episodes from './components/episodes/Episodes';
+import Locations from './components/locations/Locations';
 
 function App() {
 
@@ -35,6 +36,9 @@ useEffect(()=> {
             </Route>
             <Route exact path='/episodes' >
               <Episodes />
+            </Route>
+            <Route exact path='/locations'>
+              <Locations />
             </Route>
           </Switch>
         </main>
